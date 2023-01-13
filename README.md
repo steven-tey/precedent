@@ -15,8 +15,9 @@
 
 <p align="center">
   <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#tech-stack"><strong>Tech Stack</strong></a> ·
-  <a href="#rest-api"><strong>REST API</strong></a>
+  <a href="#one-click-deploy"><strong>One-click Deploy</strong></a> ·
+  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
+  <a href="#author"><strong>Author</strong></a>
 </p>
 <br/>
 
@@ -70,3 +71,8 @@ You can deploy this template to Vercel with the button below:
 ### Miscellaneous
 
 - [Vercel Analytics](https://vercel.com/analytics) – Track unique visitors, pageviews, and more
+
+
+## Author
+
+- Steven Tey ([@steventey](https://twitter.com/steventey))
