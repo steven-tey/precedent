@@ -40,8 +40,8 @@ export default function Home() {
           variants={FADE_DOWN_ANIMATION_VARIANTS}
         >
           <Balancer>
-            An opinionated collection of components, hooks, and utilities to
-            help you build your Next project.
+            An opinionated collection of components, hooks, and utilities for
+            your Next.js project.
           </Balancer>
         </motion.p>
         <motion.div

@@ -23,8 +23,7 @@
 
 ## Introduction
 
-Precedent is an opinionated collection of components, hooks, and utilities to
-help you build your next project.
+Precedent is an opinionated collection of components, hooks, and utilities for your Next.js project.
 
 ## One-click Deploy
 
@@ -35,7 +34,6 @@ You can deploy this template to Vercel with the button below:
 ## Tech Stack + Features
 
 https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
-
 
 ### Frameworks
 
@@ -74,7 +72,6 @@ https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-
 ### Miscellaneous
 
 - [Vercel Analytics](https://vercel.com/analytics) – Track unique visitors, pageviews, and more in a privacy-friendly way
-
 
 ## Author
 

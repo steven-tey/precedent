@@ -31,7 +31,7 @@ const DemoModal = ({
           <h3 className="font-display text-2xl font-bold">Precedent</h3>
           <p className="text-sm text-gray-500">
             Precedent is an opinionated collection of components, hooks, and
-            utilities to help you build your Next project.
+            utilities for your Next.js project.
           </p>
         </div>
       </div>
