@@ -9,7 +9,7 @@
 
 <p align="center">
   <a href="https://twitter.com/ShareGPT">
-    <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=%steventey&logo=twitter&color=0bf&logoColor=fff" alt="Twitter" />
+    <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="Twitter" />
   </a>
 </p>
 
