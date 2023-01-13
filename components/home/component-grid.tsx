@@ -36,10 +36,13 @@ export default function ComponentGrid({
         openPopover={openPopover}
         setOpenPopover={setOpenPopover}
       >
-        <button className="flex w-40 items-center justify-between rounded-md border border-gray-300 px-4 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100">
+        <button
+          onClick={() => setOpenPopover(!openPopover)}
+          className="flex w-40 items-center justify-between rounded-md border border-gray-300 px-4 py-2 transition-all duration-75 hover:border-gray-800 focus:outline-none active:bg-gray-100"
+        >
           <p className="text-gray-600">Popover</p>
           <ChevronDown
-            className={`h-4 w-4 text-gray-600 ${
+            className={`h-4 w-4 text-gray-600 transition-all ${
               openPopover ? "rotate-180" : ""
             }`}
           />
