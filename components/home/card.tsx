@@ -42,6 +42,8 @@ export default function Card({
                 code: ({ node, ...props }) => (
                   <code
                     {...props}
+                    // @ts-ignore (to fix "Received `true` for a non-boolean attribute `inline`." warning)
+                    inline="true"
                     className="rounded-sm bg-gray-100 px-1 py-0.5 font-mono font-medium text-gray-800"
                   />
                 ),
