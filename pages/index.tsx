@@ -6,14 +6,11 @@ import { DEPLOY_URL, FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
 import { Github } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
-import { useDemoModal } from "@/components/home/demo-modal";
 import Image from "next/image";
 
 export default function Home() {
-  const { DemoModal, setShowDemoModal } = useDemoModal();
   return (
     <Layout>
-      <DemoModal />
       <motion.div
         className="max-w-xl px-5 xl:px-0"
         initial="hidden"
@@ -83,19 +80,9 @@ export default function Home() {
       </motion.div>
       <motion.div
         className="my-10 grid w-full max-w-screen-xl grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0"
-        initial="hidden"
-        whileInView="show"
-        animate="show"
-        viewport={{ once: true }}
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              delayChildren: 0.5,
-              staggerChildren: 0.15,
-            },
-          },
-        }}
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ type: "spring", delay: 0.5 }}
       >
         {features.map(({ title, description, demo, large }) => (
           <Card
@@ -104,7 +91,7 @@ export default function Home() {
             description={description}
             demo={
               title === "Beautiful, reusable components" ? (
-                <ComponentGrid setShowDemoModal={setShowDemoModal} />
+                <ComponentGrid />
               ) : (
                 demo
               )

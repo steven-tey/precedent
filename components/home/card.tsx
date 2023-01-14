@@ -1,5 +1,3 @@
-import { FADE_UP_ANIMATION_VARIANTS } from "@/lib/constants";
-import { motion } from "framer-motion";
 import { ReactNode } from "react";
 import ReactMarkdown from "react-markdown";
 import Balancer from "react-wrap-balancer";
@@ -16,11 +14,10 @@ export default function Card({
   large?: boolean;
 }) {
   return (
-    <motion.div
+    <div
       className={`relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
         large ? "md:col-span-2" : ""
       }`}
-      variants={FADE_UP_ANIMATION_VARIANTS}
     >
       <div className="flex h-60 items-center justify-center">{demo}</div>
       <div className="mx-auto max-w-md text-center">
@@ -54,6 +51,6 @@ export default function Card({
           </Balancer>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

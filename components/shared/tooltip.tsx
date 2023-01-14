@@ -12,7 +12,7 @@ export default function Tooltip({
   fullWidth?: boolean;
 }) {
   const [openTooltip, setOpenTooltip] = useState(false);
-  const mobileTooltipRef = useRef(null);
+  const mobileTooltipRef = useRef<HTMLDivElement>(null);
 
   const controls = useAnimation();
   const transitionProps = { type: "spring", stiffness: 500, damping: 30 };
@@ -20,8 +20,8 @@ export default function Tooltip({
   async function handleDragEnd(_: any, info: any) {
     const offset = info.offset.y;
     const velocity = info.velocity.y;
-    // @ts-ignore
-    const height = mobileTooltipRef.current.getBoundingClientRect().height;
+    const height =
+      mobileTooltipRef.current?.getBoundingClientRect().height || 0;
     if (offset > height / 2 || velocity > 800) {
       await controls.start({ y: "100%", transition: transitionProps });
       setOpenTooltip(false);

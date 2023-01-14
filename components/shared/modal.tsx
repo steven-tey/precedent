@@ -24,7 +24,7 @@ export default function Modal({
 }) {
   const router = useRouter();
   const { key } = router.query;
-  const mobileModalRef = useRef(null);
+  const mobileModalRef = useRef<HTMLDivElement>(null);
   const desktopModalRef = useRef(null);
 
   const closeModal = useCallback(
@@ -65,8 +65,7 @@ export default function Modal({
   async function handleDragEnd(_: any, info: any) {
     const offset = info.offset.y;
     const velocity = info.velocity.y;
-    // @ts-ignore
-    const height = mobileModalRef.current.getBoundingClientRect().height;
+    const height = mobileModalRef.current?.getBoundingClientRect().height || 0;
     if (offset > height / 2 || velocity > 800) {
       await controls.start({ y: "100%", transition: transitionProps });
       closeModal();
