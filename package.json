@@ -36,7 +36,8 @@
     "react-dom": "18.2.0",
     "react-markdown": "^8.0.4",
     "react-wrap-balancer": "^0.3.0",
-    "typescript": "4.9.4"
+    "typescript": "4.9.4",
+    "use-debounce": "^9.0.3"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
