@@ -78,12 +78,8 @@ export default function Home() {
           </a>
         </motion.div>
       </motion.div>
-      <motion.div
-        className="my-10 grid w-full max-w-screen-xl grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0"
-        initial={{ opacity: 0, y: -10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ type: "spring", delay: 0.5 }}
-      >
+      {/* here we are animating with Tailwind instead of Framer Motion because Framer Motion messes up the z-index for child components */}
+      <div className="my-10 grid w-full max-w-screen-xl animate-[slide-down-fade_0.5s_ease-in-out] grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
             key={title}
@@ -99,7 +95,7 @@ export default function Home() {
             large={large}
           />
         ))}
-      </motion.div>
+      </div>
     </Layout>
   );
 }
