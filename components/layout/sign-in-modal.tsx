@@ -7,7 +7,7 @@ import {
   useCallback,
   useMemo,
 } from "react";
-import { LoadingDots } from "@/components/shared/icons";
+import { LoadingDots, Twitter } from "@/components/shared/icons";
 import Image from "next/image";
 
 const SignInModal = ({
@@ -63,6 +63,27 @@ const SignInModal = ({
                   height={20}
                 />
                 <p>Sign In with Google</p>
+              </>
+            )}
+          </button>
+          <button
+            disabled={signInClicked}
+            className={`${
+              signInClicked
+                ? "cursor-not-allowed border-gray-200 bg-gray-100"
+                : "border border-gray-200 bg-white text-black hover:bg-gray-50"
+            } flex h-10 w-full items-center justify-center space-x-3 rounded-md border text-sm shadow-sm transition-all duration-75 focus:outline-none`}
+            onClick={() => {
+              setSignInClicked(true);
+              signIn("twitter");
+            }}
+          >
+            {signInClicked ? (
+              <LoadingDots color="#808080" />
+            ) : (
+              <>
+                <Twitter className="h-5 w-5 text-[#1d9bf0]" />
+                <p>Sign In with Twitter</p>
               </>
             )}
           </button>
