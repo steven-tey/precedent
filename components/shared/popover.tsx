@@ -1,6 +1,5 @@
 import { Dispatch, SetStateAction, ReactNode, useRef } from "react";
 import * as PopoverPrimitive from "@radix-ui/react-popover";
-import { AnimatePresence } from "framer-motion";
 import useWindowSize from "@/lib/hooks/use-window-size";
 import Leaflet from "./leaflet";
 
@@ -21,11 +20,9 @@ export default function Popover({
   return (
     <>
       {isMobile && children}
-      <AnimatePresence>
-        {openPopover && isMobile && (
-          <Leaflet setShow={setOpenPopover}>{content}</Leaflet>
-        )}
-      </AnimatePresence>
+      {openPopover && isMobile && (
+        <Leaflet setShow={setOpenPopover}>{content}</Leaflet>
+      )}
       {isDesktop && (
         <PopoverPrimitive.Root>
           <PopoverPrimitive.Trigger className="inline-flex" asChild>
