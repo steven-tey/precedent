@@ -23,7 +23,7 @@ const SignInModal = ({
     <Modal showModal={showSignInModal} setShowModal={setShowSignInModal}>
       <div className="w-full overflow-hidden shadow-xl md:max-w-md md:rounded-2xl md:border md:border-gray-100">
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 bg-white px-4 py-6 pt-8 text-center md:px-16">
-          <a href="https://dub.sh">
+          <a href="https://precedent.vercel.app">
             <Image
               src="/logo.png"
               alt="Logo"

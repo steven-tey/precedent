@@ -1,5 +1,5 @@
 import { useEffect, useRef, ReactNode, Dispatch, SetStateAction } from "react";
-import { motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion, useAnimation } from "framer-motion";
 
 export default function Leaflet({
   setShow,
@@ -32,7 +32,7 @@ export default function Leaflet({
   }
 
   return (
-    <>
+    <AnimatePresence>
       <motion.div
         ref={leafletRef}
         key="leaflet"
@@ -63,6 +63,6 @@ export default function Leaflet({
         exit={{ opacity: 0 }}
         onClick={() => setShow(false)}
       />
-    </>
+    </AnimatePresence>
   );
 }
