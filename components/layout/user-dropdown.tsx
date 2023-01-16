@@ -8,10 +8,11 @@ import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
 
 export default function UserDropdown() {
   const { data: session } = useSession();
-  const { email, image } = session?.user || {};
+  const { image } = session?.user || {};
+  let { email } = session?.user || {};
   const [openPopover, setOpenPopover] = useState(false);
 
-  if (!email) return null;
+  if (!email) email = "john.doe@example.com";
 
   return (
     <motion.div
