@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-const DOMAIN = "https://precedent.vercel.app";
+const DOMAIN = "https://precedent.dev";
 
 export default function Meta({
   title = "Precedent - Building blocks for your Next.js project",
