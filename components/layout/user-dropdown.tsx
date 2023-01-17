@@ -37,7 +37,7 @@ export default function UserDropdown() {
             </button>
             <button
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
-              onClick={() => signOut()}
+              onClick={() => signOut({ redirect: false })}
             >
               <LogOut className="h-4 w-4" />
               <p className="text-sm">Logout</p>
