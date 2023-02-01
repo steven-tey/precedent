@@ -5,7 +5,8 @@ datasource db {
 }
 
 generator client {
-  provider        = "prisma-client-js"
+  provider = "prisma-client-js"
+  // output   = "../node_modules/.prisma/client" // <-- this is necessary for pnpm
 }
 
 model Account {

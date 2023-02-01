@@ -85,6 +85,21 @@ https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-
 
 - [Vercel Analytics](https://vercel.com/analytics) – Track unique visitors, pageviews, and more in a privacy-friendly way
 
+- [PNPM](https://pnpm.io/) – If you want to use PNPM there are a few things you
+need to be aware of. 
+
+    First, you need to add an additional line to your `schema.prisma` file:
+```js
+generator client {
+    provider = "prisma-client-js"
+    output   = "../node_modules/.prisma/client" // <-- this is necessary for pnpm
+}
+```
+Second, when generating the Prisma Client, you need to run:
+```bash
+pnpm exec prisma generate
+```
+
 ## Author
 
 - Steven Tey ([@steventey](https://twitter.com/steventey))
