@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/steven-tey/precedent",
+        destination: "https://hodl.ar",
         permanent: false,
       },
     ];

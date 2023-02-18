@@ -36,7 +36,7 @@ export async function getServerSideProps({
   req: NextApiRequest;
   res: NextApiResponse;
 }) {
-  const hostname = `https://precedent.dev`;
+  const hostname = `https://hodl.ar`;
 
   // Generate dynamic data for the sitemap
   //   const users = await prisma.user.findMany({
