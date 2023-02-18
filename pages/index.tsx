@@ -72,7 +72,7 @@ export default function Home() {
 
 const features = [
   {
-    title: "Usuarios creciendo",
+    title: "Subdominios creados",
     description: "Tienen su página que termina con hodl.ar",
     demo: <WebVitals />,
   },
