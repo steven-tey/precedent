@@ -38,7 +38,14 @@ export default function Layout({
       >
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
-            <p>HODL.ar</p>
+            <p>
+              <Image
+                alt="HODL.ar logo"
+                src="/hodl-logo.png"
+                width={100}
+                height={50}
+              />
+            </p>
           </Link>
           <div>
             <AnimatePresence>
