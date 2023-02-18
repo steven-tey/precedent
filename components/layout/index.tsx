@@ -72,7 +72,7 @@ export default function Layout({
           Powered by{" "}
           <a
             className="font-medium text-gray-800 underline transition-colors"
-            href="https://lacrypta.ar"
+            href="https://lacrypta.com.ar"
             target="_blank"
             rel="noopener noreferrer"
           >
