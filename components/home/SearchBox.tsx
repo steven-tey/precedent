@@ -1,14 +1,12 @@
 import { useState } from "react";
-import { useDemoModal } from "@/components/home/demo-modal";
-import Popover from "@/components/shared/popover";
-import Tooltip from "@/components/shared/tooltip";
+import { useDemoModal } from "@/components/home/RegisterSubdomainModal";
 import { ChevronDown } from "lucide-react";
 
-export default function ComponentGrid() {
+export default function SearchBox() {
   const { DemoModal, setShowDemoModal } = useDemoModal();
   const [openPopover, setOpenPopover] = useState(false);
   return (
-    <div>
+    <>
       <DemoModal />
       <button
         onClick={() => setShowDemoModal(true)}
@@ -16,6 +14,6 @@ export default function ComponentGrid() {
       >
         <p className="text-gray-600">Registrar Subdominio</p>
       </button>
-    </div>
+    </>
   );
 }

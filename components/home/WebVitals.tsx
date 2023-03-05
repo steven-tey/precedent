@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import CountingNumbers from "@/components/shared/counting-numbers";
+import CountingNumbers from "@/components/shared/CountingNumbers";
 
 export default function WebVitals() {
   return (

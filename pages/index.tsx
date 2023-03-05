@@ -1,10 +1,10 @@
-import Card from "@/components/home/card";
+import Card from "@/components/home/Card";
 import Layout from "@/components/layout";
 import Balancer from "react-wrap-balancer";
 import { motion } from "framer-motion";
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/lib/constants";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
+import WebVitals from "@/components/home/WebVitals";
+import SearchBox from "@/components/home/SearchBox";
 import Image from "next/image";
 
 export default function Home() {
@@ -53,7 +53,7 @@ export default function Home() {
           key={"Registrá tu subdominio"}
           title={"Registrá tu subdominio"}
           description={"Hacé la busqueda para ver si está disponible"}
-          demo={<ComponentGrid />}
+          demo={<SearchBox />}
           large={true}
         />
         {features.map(({ title, description, demo }) => (

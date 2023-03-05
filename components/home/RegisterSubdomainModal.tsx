@@ -1,4 +1,4 @@
-import Modal from "@/components/shared/modal";
+import Modal from "@/components/shared/Modal";
 import {
   useState,
   Dispatch,
@@ -8,7 +8,7 @@ import {
 } from "react";
 import Image from "next/image";
 
-const DemoModal = ({
+const RegisterSubdomainModal = ({
   showDemoModal,
   setShowDemoModal,
 }: {
@@ -34,7 +34,7 @@ export function useDemoModal() {
 
   const DemoModalCallback = useCallback(() => {
     return (
-      <DemoModal
+      <RegisterSubdomainModal
         showDemoModal={showDemoModal}
         setShowDemoModal={setShowDemoModal}
       />

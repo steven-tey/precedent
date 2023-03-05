@@ -4,10 +4,10 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { ReactNode } from "react";
-import useScroll from "@/lib/hooks/use-scroll";
-import Meta from "./meta";
-import { useSignInModal } from "./sign-in-modal";
-import UserDropdown from "./user-dropdown";
+import useScroll from "@/lib/hooks/useScroll";
+import Meta from "./Meta";
+import { useSignInModal } from "./SignInModal";
+import UserDropdown from "./UserDropDown";
 
 export default function Layout({
   meta,
