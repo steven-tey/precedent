@@ -85,7 +85,7 @@ export default async function Home() {
           >
             <Github />
             <p>
-              Star on GitHub{" "}
+              <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
               <span className="font-semibold">{nFormatter(stars)}</span>
             </p>
           </a>
