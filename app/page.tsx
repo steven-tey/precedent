@@ -11,13 +11,13 @@ export default async function Home() {
   const { stargazers_count: stars } = await fetch(
     "https://api.github.com/repos/steven-tey/precedent",
     {
-      // optional – feel free to remove if you don't want to display star count
       ...(process.env.GITHUB_OAUTH_TOKEN && {
         headers: {
           Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
           "Content-Type": "application/json",
         },
       }),
+      // data will revalidate every 60 seconds
       next: { revalidate: 60 },
     },
   ).then((res) => res.json());
