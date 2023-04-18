@@ -5,8 +5,23 @@ import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
+import { nFormatter } from "@/lib/utils";
 
-export default function Home() {
+export default async function Home() {
+  const { stargazers_count: stars } = await fetch(
+    "https://api.github.com/repos/steven-tey/precedent",
+    {
+      // optional – feel free to remove if you don't want to display star count
+      ...(process.env.GITHUB_OAUTH_TOKEN && {
+        headers: {
+          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
+          "Content-Type": "application/json",
+        },
+      }),
+      next: { revalidate: 60 },
+    },
+  ).then((res) => res.json());
+
   return (
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
@@ -69,7 +84,10 @@ export default function Home() {
             rel="noopener noreferrer"
           >
             <Github />
-            <p>Star on GitHub</p>
+            <p>
+              Star on GitHub{" "}
+              <span className="font-semibold">{nFormatter(stars)}</span>
+            </p>
           </a>
         </div>
       </div>
