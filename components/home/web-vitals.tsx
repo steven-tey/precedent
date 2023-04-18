@@ -1,3 +1,5 @@
+"use client";
+
 import { motion } from "framer-motion";
 import CountingNumbers from "@/components/shared/counting-numbers";
 

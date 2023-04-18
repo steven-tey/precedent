@@ -1,23 +1,22 @@
+"use client";
+
 import { useState } from "react";
-import { signOut, useSession } from "next-auth/react";
+import { signOut } from "next-auth/react";
 import { LayoutDashboard, LogOut } from "lucide-react";
 import Popover from "@/components/shared/popover";
 import Image from "next/image";
-import { motion } from "framer-motion";
-import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
+import { useRouter } from "next/navigation";
+import { Session } from "next-auth";
 
-export default function UserDropdown() {
-  const { data: session } = useSession();
+export default function UserDropdown({ session }: { session: Session }) {
+  const router = useRouter();
   const { email, image } = session?.user || {};
   const [openPopover, setOpenPopover] = useState(false);
 
   if (!email) return null;
 
   return (
-    <motion.div
-      className="relative inline-block text-left"
-      {...FADE_IN_ANIMATION_SETTINGS}
-    >
+    <div className="relative inline-block text-left">
       <Popover
         content={
           <div className="w-full rounded-md bg-white p-2 sm:w-56">
@@ -37,7 +36,9 @@ export default function UserDropdown() {
             </button>
             <button
               className="relative flex w-full items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
-              onClick={() => signOut({ redirect: false })}
+              onClick={() => {
+                signOut({ redirect: false }).then(() => router.refresh());
+              }}
             >
               <LogOut className="h-4 w-4" />
               <p className="text-sm">Logout</p>
@@ -60,6 +61,6 @@ export default function UserDropdown() {
           />
         </button>
       </Popover>
-    </motion.div>
+    </div>
   );
 }

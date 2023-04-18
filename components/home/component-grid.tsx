@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 import { useDemoModal } from "@/components/home/demo-modal";
 import Popover from "@/components/shared/popover";

@@ -1,20 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
-import { ImageResponse } from "@vercel/og";
-import { NextRequest } from "next/server";
+import { ImageResponse } from "next/server";
 
-export const config = {
-  runtime: "experimental-edge",
-};
+export const runtime = "edge";
+export const alt = "Precedent - Building blocks for your Next.js project";
+export const contentType = "image/png";
 
-const sfPro = fetch(
-  new URL("../../styles/SF-Pro-Display-Medium.otf", import.meta.url),
-).then((res) => res.arrayBuffer());
-
-export default async function handler(req: NextRequest) {
-  const [sfProData] = await Promise.all([sfPro]);
-
-  const { searchParams } = req.nextUrl;
-  const title = searchParams.get("title") || "Precedent";
+export default async function OG() {
+  const sfPro = await fetch(
+    new URL("./fonts/SF-Pro-Display-Medium.otf", import.meta.url),
+  ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
     (
@@ -32,7 +26,7 @@ export default async function handler(req: NextRequest) {
         }}
       >
         <img
-          src={new URL("../../public/logo.png", import.meta.url).toString()}
+          src={new URL("../public/logo.png", import.meta.url).toString()}
           alt="Precedent Logo"
           tw="w-20 h-20 mb-4 opacity-95"
         />
@@ -48,7 +42,7 @@ export default async function handler(req: NextRequest) {
             letterSpacing: "-0.02em",
           }}
         >
-          {title}
+          Precedent
         </h1>
       </div>
     ),
@@ -58,7 +52,7 @@ export default async function handler(req: NextRequest) {
       fonts: [
         {
           name: "SF Pro",
-          data: sfProData,
+          data: sfPro,
         },
       ],
     },
