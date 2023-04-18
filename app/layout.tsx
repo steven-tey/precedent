@@ -2,10 +2,9 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import cx from "classnames";
 import { sfPro, inter } from "./fonts";
-import NavBar from "@/components/layout/navbar";
+import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
-import { getServerSession } from "next-auth";
-import { authOptions } from "./api/auth/[...nextauth]/route";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "Precedent - Building blocks for your Next.js project",
@@ -27,12 +26,14 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession(authOptions);
   return (
     <html lang="en">
       <body className={cx(sfPro.variable, inter.variable)}>
         <div className="fixed h-screen w-full bg-gradient-to-br from-indigo-50 via-white to-cyan-100" />
-        <NavBar session={session} />
+        <Suspense fallback="...">
+          {/* @ts-expect-error Server Component */}
+          <Nav />
+        </Suspense>
         <main className="flex min-h-screen w-full flex-col items-center justify-center py-32">
           {children}
         </main>

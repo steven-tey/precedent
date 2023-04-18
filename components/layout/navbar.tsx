@@ -1,6 +1,5 @@
 "use client";
 
-import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
@@ -33,7 +32,7 @@ export default function NavBar({ session }: { session: Session | null }) {
             ></Image>
             <p>Precedent</p>
           </Link>
-          <Suspense>
+          <div>
             {session ? (
               <UserDropdown session={session} />
             ) : (
@@ -44,7 +43,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                 Sign In
               </button>
             )}
-          </Suspense>
+          </div>
         </div>
       </div>
     </>
