@@ -113,11 +113,12 @@ const features = [
       "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
     demo: (
       <a href={DEPLOY_URL}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
+        <Image
           src="https://vercel.com/button"
           alt="Deploy with Vercel"
           width={120}
+          height={30}
+          unoptimized
         />
       </a>
     ),
