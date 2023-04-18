@@ -1,7 +1,6 @@
 "use client";
 
-import { FADE_IN_ANIMATION_SETTINGS } from "@/lib/constants";
-import { AnimatePresence, motion } from "framer-motion";
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import useScroll from "@/lib/hooks/use-scroll";
@@ -34,19 +33,18 @@ export default function NavBar({ session }: { session: Session | null }) {
             ></Image>
             <p>Precedent</p>
           </Link>
-          <div>
+          <Suspense>
             {session ? (
               <UserDropdown session={session} />
             ) : (
               <button
                 className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
                 onClick={() => setShowSignInModal(true)}
-                {...FADE_IN_ANIMATION_SETTINGS}
               >
                 Sign In
               </button>
             )}
-          </div>
+          </Suspense>
         </div>
       </div>
     </>
