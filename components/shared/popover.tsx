@@ -26,7 +26,10 @@ export default function Popover({
         <Leaflet setShow={setOpenPopover}>{content}</Leaflet>
       )}
       {isDesktop && (
-        <PopoverPrimitive.Root>
+        <PopoverPrimitive.Root
+          open={openPopover}
+          onOpenChange={(isOpen) => setOpenPopover(isOpen)}
+        >
           <PopoverPrimitive.Trigger className="inline-flex" asChild>
             {children}
           </PopoverPrimitive.Trigger>
