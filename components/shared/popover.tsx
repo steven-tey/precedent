@@ -19,6 +19,7 @@ export default function Popover({
   setOpenPopover: Dispatch<SetStateAction<boolean>>;
 }) {
   const { isMobile, isDesktop } = useWindowSize();
+  if (!isMobile && !isDesktop) return <>{children}</>;
   return (
     <>
       {isMobile && children}
