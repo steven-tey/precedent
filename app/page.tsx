@@ -20,7 +20,10 @@ export default async function Home() {
       // data will revalidate every 60 seconds
       next: { revalidate: 60 },
     },
-  ).then((res) => res.json());
+  )
+    .then((res) => res.json())
+    .catch((e) => console.log(e));
+  console.log(stars);
 
   return (
     <>
