@@ -21,11 +21,7 @@ export default async function Home() {
       next: { revalidate: 60 },
     },
   )
-    .then(async (res) => {
-      const results = await res.json();
-      console.log(results);
-      return results;
-    })
+    .then((res) => res.json())
     .catch((e) => console.log(e));
 
   return (
