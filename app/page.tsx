@@ -1,4 +1,5 @@
-import TextInput from "@/components/TextInput";
+import DemoText from "@/components/home/demo-input";
+import TextInput from "@/components/home/text-input";
 import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
 import { DEPLOY_URL } from "@/lib/constants";
@@ -36,22 +37,23 @@ export default async function Home() {
         >
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
           <p className="text-sm font-semibold text-[#1d9bf0]">
-            Introducing Precedent
+            Introducing Spam.gg
           </p>
         </a>
         <h1
           className="animate-fade-up bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          <Balancer>Building blocks for your Next project</Balancer>
+          <Balancer>AI-Powered Spam Detection for any API.</Balancer>
         </h1>
         <p
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
           <Balancer>
-            An opinionated collection of components, hooks, and utilities for
-            your Next.js project.
+            Empty your overloaded inbox with the power of AI. Spam.gg is a
+            simple API that uses a specially-trained version of OpenAI to detect
+            spam in any text.
           </Balancer>
         </p>
         <div
@@ -78,9 +80,13 @@ export default async function Home() {
                 strokeLinejoin="round"
               />
             </svg>
-            <p>Deploy to Vercel</p>
+            <p>See it Working</p>
           </a>
         </div>
+      </div>
+
+      <div className="relative mx-auto mt-10 w-full max-w-screen-xl rounded-3xl bg-gradient-to-br from-black to-stone-500 px-5 py-10 md:px-0">
+        <DemoText label="Enter potential spam comments" />
       </div>
 
       <div className="relative mx-auto mt-10 w-full max-w-screen-xl rounded-3xl bg-gradient-to-br from-black to-stone-500 px-5 py-10 md:px-0">

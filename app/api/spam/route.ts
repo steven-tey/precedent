@@ -17,7 +17,7 @@ export async function POST(request: Request) {
 
     const openai = new OpenAIApi(configuration);
 
-    const isSpam = await openai.createCompletion({
+    const aiResponse = await openai.createCompletion({
 		model: "text-davinci-003",
         // model: 'gpt-3.5-turbo',
         // // model: "text-moderation-latest",
@@ -42,20 +42,25 @@ export async function POST(request: Request) {
 	})
 	.then((data) => {
 		const { choices } = data;
-		console.log(choices)
+		if (!choices || choices.length === 0) {
+			throw new Error('No choices available');
+		}
 		return choices[0].text;
 	})
+	.then((text) => {
+		// If the AI response contains the word spam, return an error
+		const pattern = /\b(spam)\b/i;
+		const result = text?.match(pattern);
+		if (result) {
+			return NextResponse.json(JSON.stringify({error: 'This message seems like spam or unwanted business promotion.', status: 'error', ok: true}), { status: 200 });
+		}
+	})
 	.catch((err) => {
-		// console.log(err)
-		throw new Error("Error in AI response");
 
+		return NextResponse.json(JSON.stringify({error: 'There was an error with the AI response.', status: 'error', ok: true}), { status: 200 });
 	});
 
-	if(isSpam?.toLowerCase() === 'spam'){
-		return NextResponse.json(JSON.stringify({message: 'This message seems legitimate.',  status: 'ok'}), { status: 200 });
-	}
-
-	return NextResponse.json(JSON.stringify({error: 'This message seems like spam or unwanted business promotion.', status: 'error'}), { status: 200 });
-
+	// Successful response
+	return NextResponse.json(JSON.stringify({message: 'This message seems legitimate.',  status: 'ok', ok: true}), { status: 200 });
 
 }
