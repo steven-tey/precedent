@@ -8,11 +8,13 @@
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/steventey">
-    <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
+  <a href="https://twitter.com/lacybuilds">
+    <img src="https://img.shields.io/twitter/follow/lacybuilds
+?style=flat&label=lacybuilds
+&logo=twitter&color=0bf&logoColor=fff" alt="Lacy-Builds Twitter followers" />
   </a>
-  <a href="https://github.com/steven-tey/precedent">
-    <img src="https://img.shields.io/github/stars/steven-tey/precedent?label=steven-tey%2Fprecedent" alt="Precedent repo star count" />
+  <a href="https://github.com/lacymorrow/lacymorrow.com">
+    <img src="https://img.shields.io/github/stars/lacymorrow/lacymorrow.com?label=lacy-morrow%2com" alt="Lacy Morrow star Count" />
   </a>
 </p>
 
@@ -37,7 +39,7 @@ You can deploy this template to Vercel with the button below:
 You can also clone & create this repo locally with the following command:
 
 ```bash
-npx create-next-app precedent --example "https://github.com/steven-tey/precedent"
+npx create-next-app precedent --example "https://github.com/lacymorrow/lacymorrow.com"
 ```
 
 ## Tech Stack + Features
@@ -69,7 +71,7 @@ https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-
 
 - `useIntersectionObserver` –  React hook to observe when an element enters or leaves the viewport
 - `useLocalStorage` – Persist data in the browser's local storage
-- `useScroll` – React hook to observe scroll position ([example](https://github.com/steven-tey/precedent/blob/main/components/layout/navbar.tsx#L12))
+- `useScroll` – React hook to observe scroll position ([example](https://github.com/lacymorrow/lacymorrow.com/blob/main/components/layout/navbar.tsx#L12))
 - `nFormatter` – Format numbers with suffixes like `1.2k` or `1.2M`
 - `capitalize` – Capitalize the first letter of a string
 - `truncate` – Truncate a string to a specified length

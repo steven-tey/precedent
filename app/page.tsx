@@ -1,3 +1,4 @@
+import TextInput from "@/components/TextInput";
 import Card from "@/components/home/card";
 import Balancer from "react-wrap-balancer";
 import { DEPLOY_URL } from "@/lib/constants";
@@ -28,9 +29,9 @@ export default async function Home() {
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
         <a
-          href="https://twitter.com/steventey/status/1613928948915920896"
+          href="https://twitter.com/lacybuilds/"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
           <Twitter className="h-5 w-5 text-[#1d9bf0]" />
@@ -79,20 +80,13 @@ export default async function Home() {
             </svg>
             <p>Deploy to Vercel</p>
           </a>
-          <a
-            className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
-            href="https://github.com/steven-tey/precedent"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Github />
-            <p>
-              <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
-              <span className="font-semibold">{nFormatter(stars)}</span>
-            </p>
-          </a>
         </div>
       </div>
+
+      <div className="relative mx-auto mt-10 w-full max-w-screen-xl rounded-3xl bg-gradient-to-br from-black to-stone-500 px-5 py-10 md:px-0">
+        <TextInput label="Enter potential spam comments" />
+      </div>
+
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
         {features.map(({ title, description, demo, large }) => (
           <Card
@@ -110,6 +104,18 @@ export default async function Home() {
           />
         ))}
       </div>
+      <a
+        className="flex max-w-fit items-center justify-center space-x-2 rounded-full border border-gray-300 bg-white px-5 py-2 text-sm text-gray-600 shadow-md transition-colors hover:border-gray-800"
+        href="https://github.com/lacymorrow"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Github />
+        <p>
+          <span className="hidden sm:inline-block">Star on</span> GitHub{" "}
+          <span className="font-semibold">{nFormatter(12345)}</span>
+        </p>
+      </a>
     </>
   );
 }
