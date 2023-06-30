@@ -23,7 +23,7 @@ export default function Tooltip({
       {isMobile && (
         <button
           type="button"
-          className={`${fullWidth ? "w-full" : "inline-flex"} sm:hidden`}
+          className={`${fullWidth ? "w-full" : "inline-flex"}`}
           onClick={() => setOpenTooltip(true)}
         >
           {children}
