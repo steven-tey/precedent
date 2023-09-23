@@ -32,7 +32,7 @@ export default function Leaflet({
   }
 
   return (
-    <AnimatePresence>
+    <>
       <motion.div
         ref={leafletRef}
         key="leaflet"
@@ -63,6 +63,6 @@ export default function Leaflet({
         exit={{ opacity: 0 }}
         onClick={() => setShow(false)}
       />
-    </AnimatePresence>
+    </>
   );
 }
