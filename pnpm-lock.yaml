@@ -74,9 +74,6 @@ dependencies:
   react-markdown:
     specifier: ^8.0.7
     version: 8.0.7(@types/react@18.2.24)(react@18.2.0)
-  react-wrap-balancer:
-    specifier: ^0.3.0
-    version: 0.3.0(react@18.2.0)
   tailwind-merge:
     specifier: ^1.14.0
     version: 1.14.0
@@ -3471,14 +3468,6 @@ packages:
       invariant: 2.2.4
       react: 18.2.0
       tslib: 2.6.2
-    dev: false
-
-  /react-wrap-balancer@0.3.0(react@18.2.0):
-    resolution: {integrity: sha512-UlnQvCvSRW0jh8uILic2LJs4tV0KjOO+P70ookE5qRpfZvsKmY8KLcV8s7TBPB6cuVYkoH7+fbqankFrFata8w==}
-    peerDependencies:
-      react: ^18.0.0
-    dependencies:
-      react: 18.2.0
     dev: false
 
   /react@18.2.0:
