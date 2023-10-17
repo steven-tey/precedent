@@ -40,6 +40,14 @@ You can also clone & create this repo locally with the following command:
 npx create-next-app precedent --example "https://github.com/steven-tey/precedent"
 ```
 
+Then, install the dependencies with your package manager of choice:
+
+```bash
+npm i
+yarn
+pnpm i
+```
+
 ## Tech Stack + Features
 
 https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
@@ -63,7 +71,6 @@ https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-
 - [Lucide](https://lucide.dev/) – Beautifully simple, pixel-perfect icons
 - [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) – Optimize custom fonts and remove external network requests for improved performance
 - [`ImageResponse`](https://nextjs.org/docs/app/api-reference/functions/image-response) – Generate dynamic Open Graph images at the edge
-- [`react-wrap-balancer`](https://github.com/shuding/react-wrap-balancer) – Simple React component that makes titles more readable
 
 ### Hooks and Utilities
 

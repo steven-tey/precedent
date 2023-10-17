@@ -18,13 +18,16 @@ export default function UserDropdown({ session }: { session: Session }) {
       <Popover
         content={
           <div className="w-full rounded-md bg-white p-2 sm:w-56">
-            {/* <Link
-              className="flex items-center justify-start space-x-2 relative w-full rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
-              href="/dashboard"
-            >
-              <LayoutDashboard className="h-4 w-4" />
-              <p className="text-sm">Dashboard</p>
-            </Link> */}
+            <div className="p-2">
+              {session?.user?.name && (
+                <p className="truncate text-sm font-medium text-gray-900">
+                  {session?.user?.name}
+                </p>
+              )}
+              <p className="truncate text-sm text-gray-500">
+                {session?.user?.email}
+              </p>
+            </div>
             <button
               className="relative flex w-full cursor-not-allowed items-center justify-start space-x-2 rounded-md p-2 text-left text-sm transition-all duration-75 hover:bg-gray-100"
               disabled
