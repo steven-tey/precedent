@@ -40,6 +40,14 @@ You can also clone & create this repo locally with the following command:
 npx create-next-app precedent --example "https://github.com/steven-tey/precedent"
 ```
 
+Then, install the dependencies with your package manager of choice:
+
+```bash
+npm i
+yarn
+pnpm i
+```
+
 ## Tech Stack + Features
 
 https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
