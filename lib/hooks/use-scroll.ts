@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useState } from "react";
 
+/**
+ * React hook to observe scroll postion.
+ * @param threshold {number} The y-axis position to observe.
+ * @returns {boolean} `True` when the user's vertical scroll position is greater than the `threshold`; otherwise, `False`.
+ */
 export default function useScroll(threshold: number) {
   const [scrolled, setScrolled] = useState(false);
 
