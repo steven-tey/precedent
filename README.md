@@ -36,16 +36,26 @@ You can deploy this template to Vercel with the button below:
 
 You can also clone & create this repo locally with the following command:
 
+> ⚠️ **Avoid** installation with `npm` and `npx` [due to this issue](https://github.com/steven-tey/precedent/issues/47)
+
 ```bash
+yarn create next-app precedent --example "https://github.com/steven-tey/precedent"
+pnpm create next-app precedent --example "https://github.com/steven-tey/precedent"
+bunx create-next-app precedent --example "https://github.com/steven-tey/precedent"
+
+# NOT RECOMMENDED
 npx create-next-app precedent --example "https://github.com/steven-tey/precedent"
 ```
 
-Then, install the dependencies with your package manager of choice:
+Install the dependencies with your package manager of choice:
 
 ```bash
-npm i
 yarn
 pnpm i
+bun i
+
+# NOT RECOMMENDED
+npm i 
 ```
 
 ## Tech Stack + Features
