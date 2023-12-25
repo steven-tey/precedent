@@ -7,10 +7,10 @@ import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 
 export const metadata = {
-  title: "Precedent - Building blocks for your Next.js project",
+  title: "xyd.me - all about tech & nonsense",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
-  metadataBase: new URL("https://precedent.dev"),
+    "Personal website of Yudi, who is continuously looking for the things he truely loves and exploring the places he has never lived. Keep it up, don't settle!",
+  metadataBase: new URL("https://xyd.me"),
   themeColor: "#FFF",
 };
 
