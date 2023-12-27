@@ -1,14 +1,14 @@
 <a href="https://xyd.me">
-  <img alt="xyd is me - all about tech & nonsense" src="https://precedent.dev/opengraph-image">
+  <img alt="xyd is me - all about tech & nonsense" src="">
   <h1 align="center">xyd is me</h1>
 </a>
 
 <p align="center">
-  Building blocks for your Next project
+  Personal website, GUI version
 </p>
 
 <p align="center">
-  <a href="https://twitter.com/steventey">
+  <a href="https://twitter.com/yudixu">
     <img src="https://img.shields.io/twitter/follow/steventey?style=flat&label=steventey&logo=twitter&color=0bf&logoColor=fff" alt="Steven Tey Twitter follower count" />
   </a>
   <a href="https://github.com/steven-tey/precedent">
@@ -16,12 +16,6 @@
   </a>
 </p>
 
-<p align="center">
-  <a href="#introduction"><strong>Introduction</strong></a> ·
-  <a href="#one-click-deploy"><strong>One-click Deploy</strong></a> ·
-  <a href="#tech-stack--features"><strong>Tech Stack + Features</strong></a> ·
-  <a href="#author"><strong>Author</strong></a>
-</p>
 <br/>
 
 ## Introduction
@@ -44,8 +38,6 @@ pnpm i
 ```
 
 ## Tech Stack + Features
-
-https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
 
 ### Frameworks
 
