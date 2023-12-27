@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 Steven Tey
+Copyright (c) 2023 Yudi Xu
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

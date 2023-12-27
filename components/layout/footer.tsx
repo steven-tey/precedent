@@ -11,10 +11,11 @@ export default function Footer() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Steven Tey
+          Yudi Xu
         </a>
+        , 2023
       </p>
-      <a
+      {/* <a
         href="https://www.buymeacoffee.com/steventey"
         target="_blank"
         rel="noopener noreferrer"
@@ -22,7 +23,7 @@ export default function Footer() {
       >
         <BuyMeACoffee className="h-6 w-6" />
         <p className="font-medium text-gray-600">Buy me a coffee</p>
-      </a>
+      </a> */}
     </div>
   );
 }
