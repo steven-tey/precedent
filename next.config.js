@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: "/github",
-        destination: "https://github.com/steven-tey/precedent",
+        destination: "https://github.com/xyd945/xyd.me.gui",
         permanent: false,
       },
     ];
