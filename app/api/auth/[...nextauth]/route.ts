@@ -18,21 +18,24 @@ export const authOptions: NextAuthOptions = {
         const { id } = user;
 
         const clickId = cookies().get("dclid")?.value;
-        if (!clickId) return;
 
-        await fetch("https://api-staging.dub.co/track", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${process.env.DUB_API_KEY}`,
-          },
-          body: JSON.stringify({
-            clickId,
-            eventName: "Created an account",
-            eventType: "lead",
-            customerId: id,
-          }),
-        }).then((res) => res.json());
+        if (clickId) {
+          console.log("clickId detected: ", clickId);
+
+          await fetch("https://api-staging.dub.co/track", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${process.env.DUB_API_KEY}`,
+            },
+            body: JSON.stringify({
+              clickId,
+              eventName: "Created an account",
+              eventType: "lead",
+              customerId: id,
+            }),
+          }).then((res) => res.json());
+        }
       }
     },
   },
