@@ -14,7 +14,10 @@ export const authOptions: NextAuthOptions = {
   ],
   events: {
     signIn: async ({ user, isNewUser }) => {
-      if (isNewUser || process.env.NODE_ENV === "development") {
+      // ideally we'd only want to track when new users sign up
+      // but for the sake of the demo we will track all sign ins
+      // if (isNewUser) {
+      if (true) {
         const { id } = user;
 
         const clickId = cookies().get("dclid")?.value;
