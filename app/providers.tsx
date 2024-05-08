@@ -6,6 +6,19 @@ import { Suspense, useEffect } from "react";
 import { Analytics as DubAnalytics } from "@dub/analytics/react";
 
 export function Providers({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Suspense>
+        <SetDubCookie />
+      </Suspense>
+      {children}
+      <Analytics />
+      <DubAnalytics apiKey="test" />
+    </>
+  );
+}
+
+const SetDubCookie = () => {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -15,12 +28,5 @@ export function Providers({ children }: { children: React.ReactNode }) {
       document.cookie = `dclid=${dclid}; path=/; max-age=31536000`;
     }
   }, [searchParams]);
-
-  return (
-    <>
-      {children}
-      <Analytics />
-      <DubAnalytics apiKey="test" />
-    </>
-  );
-}
+  return null;
+};
