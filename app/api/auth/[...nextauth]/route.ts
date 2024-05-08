@@ -4,7 +4,7 @@ import prisma from "@/lib/prisma";
 import GoogleProvider from "next-auth/providers/google";
 import { cookies } from "next/headers";
 
-export const authOptions: NextAuthOptions = {
+const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
   providers: [
     GoogleProvider({
