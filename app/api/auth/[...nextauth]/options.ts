@@ -18,14 +18,14 @@ export const authOptions: NextAuthOptions = {
       // but for the sake of the demo we will track all sign ins
       // if (isNewUser) {
       if (true) {
-        const { id } = user;
+        const { id, name, email, image } = user;
 
         const clickId = cookies().get("dclid")?.value;
 
         if (clickId) {
           console.log("clickId detected: ", clickId);
 
-          await fetch("https://api-staging.dub.co/track", {
+          await fetch("https://api-staging.dub.co/track/lead", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -34,8 +34,10 @@ export const authOptions: NextAuthOptions = {
             body: JSON.stringify({
               clickId,
               eventName: "Created an account",
-              eventType: "lead",
               customerId: id,
+              customerName: name,
+              customerEmail: email,
+              customerAvatar: image,
             }),
           }).then((res) => res.json());
         }
