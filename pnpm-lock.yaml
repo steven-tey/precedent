@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@dub/analytics':
-    specifier: ^0.0.5
-    version: 0.0.5
+    specifier: ^0.0.6
+    version: 0.0.6
   '@next-auth/prisma-adapter':
     specifier: ^1.0.7
     version: 1.0.7(@prisma/client@4.16.2)(next-auth@4.22.1)
@@ -143,8 +143,8 @@ packages:
     dependencies:
       regenerator-runtime: 0.14.0
 
-  /@dub/analytics@0.0.5:
-    resolution: {integrity: sha512-7SjsPsh9MPgU+pPflOCLcEInd9x/GhozebyUGqn+d8I/7Fgj7pkeWaOtr1THi0sCz10blJfMMnttduJ2pQHmBA==}
+  /@dub/analytics@0.0.6:
+    resolution: {integrity: sha512-xoG+V2bXL80XgWG9LzofkX3+cQXgqidx6qAFGLUdFf/h9PVrkk5r+X/kN2SEC72pB4ELR+AHwod3EApiUSJ97Q==}
     dependencies:
       server-only: 0.0.1
     dev: false
