@@ -5,7 +5,6 @@ import Nav from "@/components/layout/nav";
 import Footer from "@/components/layout/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
-import { Analytics as DubAnalytics } from "@dub/analytics/react";
 
 export const metadata = {
   title: "Precedent - Building blocks for your Next.js project",
@@ -30,7 +29,6 @@ export default async function RootLayout({
           {children}
         </main>
         <Footer />
-        <DubAnalytics />
         <VercelAnalytics />
       </body>
     </html>
