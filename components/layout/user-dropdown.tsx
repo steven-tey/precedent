@@ -8,7 +8,7 @@ import Image from "next/image";
 import { Session } from "next-auth";
 
 export default function UserDropdown({ session }: { session: Session }) {
-  const { email, image } = session?.user || {};
+  const { name, email, image } = session?.user || {};
   const [openPopover, setOpenPopover] = useState(false);
 
   if (!email) return null;
@@ -54,7 +54,7 @@ export default function UserDropdown({ session }: { session: Session }) {
         >
           <Image
             alt={email}
-            src={image || `https://avatars.dicebear.com/api/micah/${email}.svg`}
+            src={image || `https://avatars.dicebear.com/api/micah/${name}.svg`}
             width={40}
             height={40}
           />
