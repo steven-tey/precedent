@@ -50,12 +50,12 @@ pnpm i
 
 ## Tech Stack + Features
 
-https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
+https://github.com/user-attachments/assets/47b27346-6d5d-48c4-8db6-2542e700a880
 
 ### Frameworks
 
 - [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
-- [Clerk](https://clerk.com/) - A comprehensive user management platform with beautifully designed, drop in React components
+- [Clerk](https://clerk.com/) - A comprehensive user management platform with beautifully designed, drop-in React components
 
 ### Platforms
 
