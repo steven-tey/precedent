@@ -50,7 +50,7 @@ pnpm i
 
 ## Tech Stack + Features
 
-https://github.com/user-attachments/assets/47b27346-6d5d-48c4-8db6-2542e700a880
+https://github.com/user-attachments/assets/cffb0457-a8a5-424b-bb8a-70c94a9156e9
 
 ### Frameworks
 
