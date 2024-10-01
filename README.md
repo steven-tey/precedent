@@ -32,7 +32,7 @@ Precedent is an opinionated collection of components, hooks, and utilities for y
 
 You can deploy this template to Vercel with the button below:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsteven-tey%2Fprecedent&project-name=precedent&repository-name=precedent&demo-title=Precedent&demo-description=An%20opinionated%20collection%20of%20components%2C%20hooks%2C%20and%20utilities%20for%20your%20Next%20project.&demo-url=https%3A%2F%2Fprecedent.dev&demo-image=https%3A%2F%2Fprecedent.dev%2Fopengraph-image&env=GOOGLE_CLIENT_ID,GOOGLE_CLIENT_SECRET,NEXTAUTH_SECRET&envDescription=How%20to%20get%20these%20env%20variables%3A&envLink=https%3A%2F%2Fgithub.com%2Fsteven-tey%2Fprecedent%2Fblob%2Fmain%2F.env.example&stores=%5B%7B"type"%3A"postgres"%7D%5D)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsteven-tey%2Fprecedent&project-name=precedent&repository-name=precedent&demo-title=Precedent&demo-description=An%20opinionated%20collection%20of%20components%2C%20hooks%2C%20and%20utilities%20for%20your%20Next%20project.&demo-url=https%3A%2F%2Fprecedent.dev&demo-image=https%3A%2F%2Fprecedent.dev%2Fopengraph-image&env=NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY,CLERK_SECRET_KEY&envDescription=Create%20a%20Clerk%20application%20to%20get%20these%20variables%3A&envLink=https%3A%2F%2Fdashboard.clerk.com%2Fapps%2Fnew)
 
 You can also clone & create this repo locally with the following command:
 
@@ -50,18 +50,16 @@ pnpm i
 
 ## Tech Stack + Features
 
-https://user-images.githubusercontent.com/28986134/212368288-12f41e37-aa8c-4e0a-a542-cf6d23410a65.mp4
+https://github.com/user-attachments/assets/aef3c099-e371-43bf-b426-f5ba73185a7c
 
 ### Frameworks
 
 - [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
-- [Auth.js](https://authjs.dev/) – Handle user authentication with ease with providers like Google, Twitter, GitHub, etc.
-- [Prisma](https://www.prisma.io/) – Typescript-first ORM for Node.js
+- [Clerk](https://clerk.com/) - A comprehensive user management platform with beautifully designed, drop-in React components
 
 ### Platforms
 
 - [Vercel](https://vercel.com/) – Easily preview & deploy changes with git
-- [Vercel Postgres](https://vercel.com/postgres) – Serverless Postgres at the Edge
 
 ### UI
 
