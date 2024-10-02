@@ -55,7 +55,7 @@ https://github.com/user-attachments/assets/aef3c099-e371-43bf-b426-f5ba73185a7c
 ### Frameworks
 
 - [Next.js](https://nextjs.org/) – React framework for building performant apps with the best developer experience
-- [Clerk](https://clerk.com/) - A comprehensive user management platform with beautifully designed, drop-in React components
+- [Clerk](https://go.clerk.com/precedent) - A comprehensive user management platform with beautifully designed, drop-in React components
 
 ### Platforms
 
